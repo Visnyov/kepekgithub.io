@@ -1,0 +1,212 @@
+body {
+    background: slategray;
+    background: linear-gradient(
+      43deg,
+      rgb(231, 138, 50) 10%,
+      rgb(78, 68, 9) 50%,
+      rgb(172, 103, 14) 90%
+    );
+    background-attachment: fixed;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  
+  #container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 75%;
+  }
+  
+  #display {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px rgba(3, 44, 2, 0.5),
+      0 3em 20px -20px rgba(0, 0, 0, 0.75);
+  }
+
+  #previous {
+    background: rgb(26, 85, 8);
+    background: linear-gradient(
+      0deg,
+      rgb(207, 112, 35) 10%,
+      rgb(235, 193, 80) 50%,
+      rgb(194, 118, 4) 90%
+    );
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 30px 0 0 30px;
+    box-shadow: inset 0 0 10px 3px black;
+  }
+  
+  #next {
+    background: rgb(71, 47, 3);
+    background: linear-gradient(
+      0deg,
+      rgb(207, 112, 35) 10%,
+      rgb(235, 193, 80) 50%,
+      rgb(194, 118, 4) 90%
+    );
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 0 30px 30px 0;
+    box-shadow: inset 0 0 15px 3px black;
+  }
+  
+  #picture {
+    width: 100%;
+    position: relative;
+  }
+  
+  #picture img {
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #description {
+    display: none;
+    box-shadow: inset 0 0px 15px black;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    color: white;
+  }
+  
+  #title {
+    display: none;
+    margin: 10px;
+    font-size: 20px;
+  }
+  
+  #blurb {
+    display: none;
+    margin: 0 20px 20px 20px;
+    text-align: justify;
+    font-size: 16px;
+  }
+  
+  #previous img {
+    height: 25px;
+    width: 25px;
+  }
+  
+  #next img {
+    height: 25px;
+    width: 25px;
+    
+  }
+  
+  .kep {
+    margin:80px 0 0 0;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    box-shadow: inset 10px 10px 25px rgba(0, 0, 0, 0.5),
+      inset 5px 5px 10px rgba(0, 0, 0, 0.75);
+    background: slategray;
+    background: linear-gradient(
+      45deg,
+      rgb(114, 53, 4) 10%,
+      rgb(175, 75, 17) 50%,
+      rgb(180, 109, 27) 90%
+    );
+    border-radius: 20px;
+  }
+  
+  #kep {
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: scroll;
+    width: 100%;
+  }
+  
+  #kep::-webkit-scrollbar {
+    height: 10px;
+  }
+  /*
+  #kep::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(99, 35, 5);
+    background: rgb(22, 22, 22);
+    border-radius: 5px;
+    margin: 20px;
+  }
+  */
+  #kep::-webkit-scrollbar-thumb {
+    background: rgb(248, 245, 245);
+    box-shadow: inset 0 0 5px rgb(44, 30, 3);
+    border-radius: 5px;
+  }
+  
+  #kep::-webkit-scrollbar-thumb:hover {
+    background: rgba(253, 104, 4, 0.842);
+    box-shadow: inset 0 0 5px rgb(10, 10, 10);
+  }
+  
+  .thumb img {
+    transition: filter 0.5s !important;
+    box-shadow: 0px 15px 15px -20px rgba(0, 0, 0, 0.75);
+    width: 140px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: grayscale(100%);
+    margin: 0 20px;
+  }
+  /*kis kép eredeti szin és kiemel*/
+  .thumb:hover img {
+    transition: all 0.25s !important;
+    filter: grayscale(0%) !important;
+    transform: scale(1.1) !important;
+  }
+  
+  .thumb {
+    margin: 20px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .hidden {
+    margin: 0;
+    display: none;
+    position: absolute;
+    background: slategray;
+    color: white;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 16px;
+    padding: 2px 20px;
+    border-radius: 15px;
+    white-space: nowrap;
+    box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.75);
+  }
+  
+  .thumb:hover .hidden {
+    display: block !important;
+  }
